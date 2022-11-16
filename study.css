@@ -1,0 +1,112 @@
+
+*{
+    font-family: 'Montserrat', sans-serif
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.tab{
+    height: 120px;
+    width: 120px;
+    margin-right: 4px;
+    border-radius: 5px; 
+    padding:30px;
+    margin: 40px;
+   margin-left: 50px;
+    background-color: #e0fbfc;
+   
+}
+.tab a{
+    text-decoration: none;
+}
+.pdf-icon{
+    width:40px;
+    height:40px;
+    position:relative;
+    left:1000px;
+    bottom:120px;
+}
+.video-icon{
+    width:60px;
+    height:60px;
+    position:relative;
+    left:1020px;
+    bottom:110px;
+}
+
+.arrow{
+    width:40px;
+    height:40px;
+    position: relative;
+    bottom:20px;
+    right:9px;
+}
+.header{
+    background-color: #3d5a80;
+    color:white;
+    height:300px;
+    text-align:center ;
+    padding-top: 45px;
+    position: relative;
+    bottom: 10px;
+    
+}
+.title{
+    font-size: 80px;
+    
+}
+.tagline{
+  font-weight:200;  
+  font-size: 30px;
+  position:relative;
+  bottom:40px;
+
+}
+.resources{
+    background-color: #98c1d9;
+    height:550px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left:80px ;
+    
+    
+}
+.footer{
+    background-color: #3d5a80;
+    height:200px;
+    
+}
+.unit{
+    color:black;
+}
+.alpha{
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top:25px;
+    left:40px;
+}
+.unit-header{
+    background-color: #3d5a80;
+    height: 120px;
+}
+.unit-name{
+    color: white;
+    font-weight: 200;
+    padding: 20px;
+    
+}
+.unit-body{
+    background-color: #98c1d9;  
+    height: 600px;
+}
+#readings{
+    color: white;
+    font-weight: 100;
+}
+#videos{
+    color: white;
+    font-weight: 100;
+}
