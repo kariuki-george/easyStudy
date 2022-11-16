@@ -110,3 +110,10 @@ body{
     color: white;
     font-weight: 100;
 }
+
+
+.supar{
+    background:"green";
+    display:"flex";
+    flex-direction:"column";
+}

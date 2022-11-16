@@ -51,9 +51,8 @@ const createContent = async (name, file, fileType, unitId) => {
  * Upload unit content
  */
 
-const uploadUnitContent = async (file, fileName, unitId) => {
+const uploadUnitContent = async (file, fileName, unitId, type) => {
   try {
-    const type = fileName.split(".")[1];
     const { data, error } = await supabase.storage
       .from("content")
       .upload(type + "/" + fileName, file, {
