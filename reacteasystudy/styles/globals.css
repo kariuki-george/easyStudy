@@ -75,7 +75,7 @@ body{
   text-align:center ;
   padding-top: 45px;
   position: relative;
-  bottom: 10px;
+  /* bottom: 10px;  This was the one causing a white space between header and body */
   
 }
 .title{
@@ -91,13 +91,13 @@ bottom:40px;
 }
 .resources{
   background-color: #98c1d9;
-  height:550px;
+  
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   padding-left:80px ;
-  
-  
+  min-height: 50vh;
+    
 }
 .footer{
   background-color: #3d5a80;
@@ -143,4 +143,48 @@ bottom:40px;
   background:"green";
   display:"flex";
   flex-direction:"column";
+}
+
+
+
+.upload{
+  display:flex;
+  flex-direction:column;
+
+  
+  padding:15px;
+
+}
+
+
+.upload__message{
+  width:100%;
+  fontsize:18px;
+  margin-top:10px;
+  margin-bottom:10px;
+  text-align:center
+
+}
+
+
+.upload__create, .upload__upload{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+
+
+}
+
+
+.upload button, input, select, .upload__selected{
+  padding:5px;
+  border-radius:5px;
+  font-size:18px;
+  margin-top:20px;
+
+}
+
+.upload button:hover{
+cursor:pointer;
 }
