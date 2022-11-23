@@ -139,6 +139,7 @@ export default () => {
             onChange={(e) => {
               setNewUnit(e.target.value);
             }}
+            placeholder="Enter new unit name"
             value={newUnit}
           />
           <button onClick={handleSave}>create unit</button>
