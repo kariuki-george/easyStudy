@@ -28,7 +28,7 @@ export const getAllUnits = async () => {
  *
  *
  */
-export const getAllUnitContent = async (name, type) => {
+export const getAllUnitContent = async (name) => {
   try {
     const { data, error } = await supabase
       .from("units")

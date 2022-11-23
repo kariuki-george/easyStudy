@@ -111,7 +111,12 @@ export default () => {
     const name = fileToUpload.name;
 
     setLoading({ loading: true, message: "Uploading" });
-    const data = await uploadUnitContent(file, name, selectedUnit.id, type);
+    const data = await uploadUnitContent(
+      fileToUpload,
+      name,
+      selectedUnit.id,
+      type
+    );
     setLoading({ loading: false, message: "" });
 
     if (data.success) {
