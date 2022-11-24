@@ -74,11 +74,11 @@ export default () => {
   const [newUnit, setNewUnit] = useState<string>("");
 
   const handleSave = async () => {
-    setLoading({ loading: true, message: "Creating unit" });
     if (newUnit.length === 0) {
       alert("Please provide the unit name");
       return;
     }
+    setLoading({ loading: true, message: "Creating unit" });
     const data = await createUnit(newUnit);
     setLoading({ loading: false, message: "" });
     setNewUnit("");
