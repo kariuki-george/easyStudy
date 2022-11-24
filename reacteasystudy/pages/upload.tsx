@@ -76,7 +76,8 @@ export default () => {
   const handleSave = async () => {
     setLoading({ loading: true, message: "Creating unit" });
     if (newUnit.length === 0) {
-      return alert("Please provide the unit name");
+      alert("Please provide the unit name");
+      return;
     }
     const data = await createUnit(newUnit);
     setLoading({ loading: false, message: "" });
