@@ -24,7 +24,7 @@ const UnitContent = () => {
       <div>
         <div
           style={{
-            display: "flex",
+            display: "none",
             backgroundColor: "black",
             justifyContent: "space-around",
           }}
@@ -49,15 +49,15 @@ const UnitContent = () => {
         <object
           data={content.file}
           type={content.type}
-          width="90%"
-          height="90%"
-          style={{ width: "99vw", height: "90vh" }}
+          width="100%"
+          height="100%"
+          style={{ width: "100", height: "100vh" }}
         >
           <iframe
             src={content.file}
-            width="90%"
-            height="90%"
-            style={{ width: "99vw", height: "90vh" }}
+            width="100%"
+            height="100%"
+            style={{ width: "100", height: "100vh" }}
           >
             <div>
               Your browser does not support this file. Download it instead

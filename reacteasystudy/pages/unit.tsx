@@ -60,6 +60,12 @@ export default function Page() {
     allUnitContent();
   }, []);
 
+  const list = [
+    { name: "pdf", value: "application/pdf" },
+    { name: "videos", value: "video/mp4" },
+    { name: "pptx", value: "application/wps-office.pptx" },
+  ];
+
   return (
     <>
       <div className="unit-header">
@@ -92,7 +98,7 @@ export default function Page() {
         </div>
       </div>
       <div className="unit-body">
-        <a href="#readings">
+        {/* <a href="#readings">
           <img
             className="pdf-icon"
             src="https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Document-256.png"
@@ -103,33 +109,36 @@ export default function Page() {
           className="video-icon"
           src="https://cdn2.iconfinder.com/data/icons/leto-blue-online-education/64/__book_video_tutorial_training-256.png"
           alt=""
-        />
-        <h2 id="readings">Reading Materials (pdf only)</h2>
-        <div style={{ display: "flex", flexWrap: "wrap", width: "100vw" }}>
-          {data
-            .filter((content) => content.type === "application/pdf")
-            .map((content, index) => (
-              <Link
-                key={index}
-                href={`/unit-content?file=${content.file}&type=${content.type}`}
-                passHref
-              >
-                <span
-                  style={{
-                    background: "white",
-                    padding: "20px",
-                    width: "300px",
-                    margin: "5px",
-                    cursor: "pointer",
-                  }}
-                >
-                  {content.name}
-                </span>
-              </Link>
-            ))}
-        </div>
+        /> */}
 
-        <h2 id="videos">Related Videos</h2>
+        <ul>
+          {list.map((listC) => (
+            <li className="unit-body-body">
+              <h2>{listC.name} </h2>
+              <div>
+                {data
+                  .filter((content) => content.type === listC.value)
+                  .map((content, index) => (
+                    <Link
+                      key={index}
+                      href={`/unit-content?file=${content.file}&type=${content.type}`}
+                      passHref
+                      style={{
+                        background: "white",
+                        padding: "15px",
+                        cursor: "pointer",
+                        borderRadius: "5px",
+                      }}
+                    >
+                      <span>{content.name.split(".")[0]}</span>
+                    </Link>
+                  ))}
+              </div>
+            </li>
+          ))}
+        </ul>
+
+        {/* <h2 id="videos">Related Videos</h2>
         <div style={{ display: "flex", flexWrap: "wrap", width: "100vw" }}>
           {data
             .filter((content) => content.type === "video/mp4")
@@ -152,7 +161,7 @@ export default function Page() {
                 </span>
               </Link>
             ))}
-        </div>
+        </div> */}
       </div>
     </>
   );
