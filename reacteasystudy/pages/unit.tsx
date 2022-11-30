@@ -63,6 +63,7 @@ export default function Page() {
   const list = [
     { name: "pdf", value: "application/pdf" },
     { name: "videos", value: "video/mp4" },
+    { name: "images", value: "image/png" },
     // { name: "pptx", value: "application/wps-office.pptx" },
   ];
 
