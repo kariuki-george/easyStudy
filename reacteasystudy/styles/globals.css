@@ -205,6 +205,8 @@ cursor:pointer;
 .unit-body ul{
   display:flex;
   gap:100px;
+  width:100%;
+  justify-content:space-around;
 
 
   
