@@ -112,8 +112,8 @@ export default function Page() {
         /> */}
 
         <ul>
-          {list.map((listC) => (
-            <li className="unit-body-body">
+          {list.map((listC, index) => (
+            <li className="unit-body-body" key={index}>
               <h2>{listC.name} </h2>
               <div>
                 {data
